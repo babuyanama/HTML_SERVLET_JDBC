@@ -45,7 +45,7 @@ public class servlet_jdbc extends HttpServlet {
 		double sal=Double.parseDouble(request.getParameter("esal"));
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/servletdb", "root", "Sudheery@8807");
+			Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/servletdb", "root", "SQLPassword");
 			PreparedStatement pst=con.prepareStatement("insert into employeedb values(?, ?, ?)");
 			pst.setInt(1, id);
 			pst.setString(2, name);
